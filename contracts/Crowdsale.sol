@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 import "./SafeMath.sol";
 import "./SafeERC20.sol";
 import "./ReentrancyGuard.sol";
-import "./Context.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 /**
  * @title Crowdsale
