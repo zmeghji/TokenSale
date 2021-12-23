@@ -18,8 +18,15 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(process.env.MNEMONIC, "http://127.0.0.1:8545/", MetaMaskAccountIndex ),
       network_id: 1337
+    },
+    ropsten_infura: {
+      provider: function() {
+        return new HDWalletProvider(process.env.MNEMONIC, "https://ropsten.infura.io/v3/"+process.env.INFURA_PROJECT_ID, MetaMaskAccountIndex)
+      },
+      network_id: 3
     }
   },
+  
   compilers: {
     solc: {
       version: "^0.8.0"
